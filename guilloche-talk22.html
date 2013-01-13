@@ -1,0 +1,28 @@
+<html>
+<title>Playing Around With Guilloche Patterns</title>
+<body>
+<p align=center><font size=+3>Playing Around With Guilloche Patterns</font>
+<hr>
+<font size=+3>
+<p>What went wrong?
+
+<p>Consider the following picture:
+<p align=center><img src="what-is-the-problem.png">
+
+<p>The arm rotates at a constant angular velocity.
+<p>Is the speed at which the intersection of the arm
+and the envelope travels a constant?
+
+<p>No.  The farther out on the radius of the arm the
+intersection is, the faster it travels.  The speed along
+the envelope path is not constant.
+
+<p>However, our generalized polygon code maps the period
+to points along the envelope as if the speed were constant.
+This is the source of the problem.
+
+<p>How to fix this?
+
+<p><a href="guilloche-talk23.html">next</a>
+</body>
+</html>

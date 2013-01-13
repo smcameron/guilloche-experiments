@@ -1,0 +1,26 @@
+<html>
+<title>Playing Around With Guilloche Patterns</title>
+<body>
+<p align=center><font size=+3>Playing Around With Guilloche Patterns</font>
+<hr>
+<font size=+3>
+<p>Ok, how about using our arbitrary path function to form an envelope?
+<p align=center><img src="rosette4.png">
+<p>Not bad!
+
+<p>The outer envelope function is defined like so:
+<pre>
+    /* calculate outer envelope shape... */
+    outerx = polygonx(t, period, starx, stary, tlen, npoints, total_len);
+    outery = polygony(t, period, starx, stary, tlen, npoints, total_len);
+</pre>
+with starx[] and stary[] being filled out with the vertices of a 7 pointed star.
+
+<p>We do have to be careful that the period matches what is used for the inner
+envelope function and the drawing function. 
+
+<p>See: guilloche14.pde
+
+<p><a href="guilloche-talk20.html">next</a>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+<title>Playing Around With Guilloche Patterns</title>
+<body>
+<p align=center><font size=+3>Playing Around With Guilloche Patterns</font>
+<hr>
+<font size=+3>
+<p>In my first attempt at rosettes, I failed to realize immediately that
+having the "wheels" was no longer needed.  Previously we've been able to 
+use our system of wheels following an arbitrary path to produce interesting
+images, so why not make the path the midpoint between two envelope functions,
+and scale things such that we fit things just to the edges of the envelope
+functions?
+
+<p>Easier said than done.
+
+<p>First, how to make the envelope functions?  This is not so hard.
+
+<p>For a start we can use our arbitrary path system to construct
+an envelope function (there is a slight problem with this, which we
+will get to.)
+
+<p>As another possibility, we can construct a circle easily enough:
+<pre>
+	x = r * cos(t * C);
+	y = r * sin(t * C);
+</pre>
+Then, we can make r a function of t as well:
+<pre>
+	r = cos(t * C * M) * R + min_radius;
+	x = r * cos(t * C);
+	y = r * sin(t * C);
+</pre>
+Now we have a kind of undulating circle.
+
+<p>Now, how to scale our drawing so that it fits between
+the inner and outer envelope function?
+
+<p>This is where it gets ugly.  The envelope functions are defined
+by a few constants and by t.  t is used to determine an angle to
+feed cos and sin functions to ultimately determine the values of the
+envelope function <em> at that value of t -- which means at a
+particular angle determined by t</em>.
+
+<p>The path of the pen is also determined by t.  However, it is offset
+in both x and y as the system of wheels spins around.  So the <em>angle</em>
+which must be used to determine the scaling factors to use to keep the drawing
+just touching the envelope functions is <em>different</em> than the angle
+that the current value of t will provide when fed into the envelope functions.
+There is some complicated relationship between these which was too difficult
+for me to bother trying to figure out, esp. when I realized the examples of
+rosettes that I was trying to mimic did not actually use systems of spinning
+wheels.
+
+Nevertheless, guilloche11.pde is an example in which I tried to make this work.
+
+<p><a href="guilloche-talk17.html">next</a>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<title>Playing Around With Guilloche Patterns</title>
+<body>
+<p align=center><font size=+3>Playing Around With Guilloche Patterns</font>
+<hr>
+<font size=+3>
+<p>In my second attempt at rosettes, I was more successful.   The envelope
+functions are defined as before.
+
+<p>The x axis of a sinusoidal function is then mapped to the mid point between
+the two envelope functions along a radius determined by t.  The sinusoidal 
+function is scaled to be between the range -0.5 ... +0.5, then multiplied
+by the difference between the two envelope functions, and the inner envelope
+function is then added to the result.  This forms the dynamic radius of our
+drawing arm, which sweeps around.
+
+<p>Perhaps a picture and a bit of math will help:
+<p align=center><img src="rosette2.png">
+
+<p>The green line is the outer envelope function.
+<p>The red line is the inner envelope function.
+<p>The blue line is the radial difference between the
+outer and inner envelope functions and is what the x
+axis of the sinusoidal cyan lines is mapped to.
+<p>The two cyan lines are out of phase by PI / 2.
+
+<p>See: guilloche12.pde
+
+<p><a href="guilloche-talk18.html">next</a>
+</body>
+</html>

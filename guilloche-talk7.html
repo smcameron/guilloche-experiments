@@ -1,0 +1,24 @@
+<html>
+<title>Playing Around With Guilloche Patterns</title>
+<body>
+<p align=center><font size=+3>Playing Around With Guilloche Patterns</font>
+<hr>
+<font size=+3>
+<p>So we need f(t) and g(t) to produce x and y coords of a rectangular path.
+<p>How?
+<p>As t moves from 0 to infinity, we want the path to move to the right
+for a bit, then up for a bit, then left for a bit, then down for a bit,
+then just keep doing that, going around and around.  So these functions
+have some sort of period, repeating, well, periodically.
+<p>If we just think about x = f(t), for x, we want it to begin at 0,
+then increase at a constant rate for a bit, then stand still for a bit,
+then decrease back to zero for a bit, then stand still for a bit, then
+repeat.
+<p>And for y, we want it to remain constant for a bit, then move up
+(decrease towards zero) at a constant rate for a bit, then remain
+zero for a bit, then increase up to it's original value at a constant rate.
+<p>So how to do that?
+<a href="code-example-1.txt">Example 1</a> (see guilloche.pde)
+<p><a href="guilloche-talk8.html">next</a>
+</body>
+</html>

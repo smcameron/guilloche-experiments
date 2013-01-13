@@ -1,0 +1,33 @@
+<html>
+<title>Playing Around With Guilloche Patterns</title>
+<body>
+<p align=center><font size=+3>Playing Around With Guilloche Patterns</font>
+<hr>
+<font size=+3>
+<p>Up to now, the path our main wheel has taken has been a rectangle,
+produced by a custom written function.
+<p>We can generalize this to any ordered sequence of line segments to
+produce arbitrary paths.
+<p>the f(t), g(t) over the interval 0 &lt; t &lt; period cover all the
+line segments, then f(t) and g(t) simply have to compute where t/period
+falls in the sequence of lines.  Compute the total length of all the
+line segments, add up each line segment from the beginning of the sequence
+until the length/total_length exceeds t/period, and then compute the offset
+into the current segment such that length/total_length = t/period, then
+find x and y offsets from the beginning of the current line segment by
+interpolation. 
+
+<p><img src="parametric-paths.png">
+<p>Well, 50/100 = 0.5
+<p>0.5 * 16 = 8.
+<p>The first segment is only 7, so we're a little bit into the
+2nd segment.
+<p>How much into the second segment? (8 - 7) / 4 =  0.25.
+<p>x = 5 + 0.25 * (7 - 5) = 5.5
+<p>y = 5 + 0.25 * (2 - 5) = 4.25
+
+
+<p>see guilloche9.pde
+<p><a href="guilloche-talk15.html">next</a>
+</body>
+</html>
